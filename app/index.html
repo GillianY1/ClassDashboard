@@ -4,15 +4,50 @@ layout: ./app/layout.ejs
 engine: ejs
 current: index
 ---
-
-<h1>
-hello kitty
-</h1>
-<div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+<section class='p-4'>
+  <div class='d-flex justify-content-center align-items-center mb-6'>
+    <h1 class='fs-4 me-5 mb-0'>Admin</h1>
+    <a class='fs-6 me-auto' href='#'>
+      <span class="material-icons me-2 align-middle">add</span>
+      Add New Admin
+    </a>
+    <a href='#'> <span class="material-icons">notifications_active</span></a>
+    <a href='#'> <span class="material-icons ms-3">search</span></a>
   </div>
-</div>
+  <table class="table table-hover">
+    <thead>
+    <tr> 
+      <th scope="col">ID 
+        <span class="material-icons algin-top fs-sm">
+          arrow_downward
+        </span> 
+      </th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Verified</th>
+      <th scope="col"> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr> 
+      <!--th scope="row">#1</th-->
+      <td>#1</td>
+      <td>Emir Wicks</td>
+      <td>emir.wicks@mail.com</td>
+      <td>Yes</td>
+      <td class='d-flex justify-content-end'>
+        <a class='d-block ' href="/" ><span class="material-icons">
+          edit
+        </span></a>
+        <a href='/' class='d-block ms-3'><span class="material-icons">
+          visibility
+        </span>
+      </a>
+      </td>
+    </tr>
+    <tbody>
+  </table>  
+
+</sectoin>
+
+

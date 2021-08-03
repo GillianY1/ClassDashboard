@@ -7,7 +7,7 @@
 
 // scss-docs-start gray-color-variables
 $white:    #fff !default;
-$gray-100: #f8f9fa !default;
+$gray-100: #f8f9fa !default; 
 $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
 $gray-400: #ced4da !default;
@@ -61,6 +61,7 @@ $colors: (
   "teal":       $teal,
   "cyan":       $cyan,
   "white":      $white,
+  "gray-light": $gray-100,
   "gray":       $gray-600,
   "gray-dark":  $gray-800
 ) !default;
@@ -250,11 +251,13 @@ $gradient: linear-gradient(180deg, rgba($white, .15), rgba($white, 0)) !default;
 $spacer: 1rem !default;
 $spacers: (
   0: 0,
-  1: $spacer * .25,
-  2: $spacer * .5,
-  3: $spacer,
-  4: $spacer * 1.5,
-  5: $spacer * 3,
+  1: $spacer * .25, //4
+  2: $spacer * .5, //8
+  3: $spacer, 
+  4: $spacer * 1.5, //24
+  5: $spacer * 3, //48
+  6: $spacer *2,   // 32
+  7: $spacer *2.5 //40 
 ) !default;
 
 $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) !default;
@@ -422,12 +425,13 @@ $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberati
 $font-family-base:            var(--#{$variable-prefix}font-sans-serif) !default;
 $font-family-code:            var(--#{$variable-prefix}font-monospace) !default;
 
+
 // $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
 // $font-size-base affects the font size of the body text
 $font-size-root:              null !default;
 $font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
-$font-size-sm:                $font-size-base * .875 !default;
-$font-size-lg:                $font-size-base * 1.25 !default;
+$font-size-sm:                $font-size-base * .875 !default; //14
+$font-size-lg:                $font-size-base * 1.25 !default; //20
 
 $font-weight-lighter:         lighter !default;
 $font-weight-light:           300 !default;
@@ -441,11 +445,11 @@ $line-height-base:            1.5 !default;
 $line-height-sm:              1.25 !default;
 $line-height-lg:              2 !default;
 
-$h1-font-size:                $font-size-base * 2.5 !default;
-$h2-font-size:                $font-size-base * 2 !default;
-$h3-font-size:                $font-size-base * 1.75 !default;
-$h4-font-size:                $font-size-base * 1.5 !default;
-$h5-font-size:                $font-size-base * 1.25 !default;
+$h1-font-size:                $font-size-base * 2.5 !default; //40
+$h2-font-size:                $font-size-base * 2 !default; //32
+$h3-font-size:                $font-size-base * 1.75 !default; //28
+$h4-font-size:                $font-size-base * 1.5 !default; //24
+$h5-font-size:                $font-size-base * 1.25 !default; //20
 $h6-font-size:                $font-size-base !default;
 // scss-docs-end font-variables
 
@@ -456,7 +460,8 @@ $font-sizes: (
   3: $h3-font-size,
   4: $h4-font-size,
   5: $h5-font-size,
-  6: $h6-font-size
+  6: $h6-font-size,
+  sm: $font-size-sm
 ) !default;
 // scss-docs-end font-sizes
 
@@ -917,12 +922,12 @@ $zindex-tooltip:                    1080 !default;
 // Navs
 
 // scss-docs-start nav-variables
-$nav-link-padding-y:                .5rem !default;
-$nav-link-padding-x:                1rem !default;
+$nav-link-padding-y:                0.25rem !default;//.5rem !default;
+$nav-link-padding-x:                28px !default;// 1rem !default;
 $nav-link-font-size:                null !default;
-$nav-link-font-weight:              null !default;
-$nav-link-color:                    $link-color !default;
-$nav-link-hover-color:              $link-hover-color !default;
+$nav-link-font-weight:              bold !default;
+$nav-link-color:                    black;//$link-color !default;
+$nav-link-hover-color:              $primary;//$link-hover-color !default;
 $nav-link-transition:               color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out !default;
 $nav-link-disabled-color:           $gray-600 !default;
 
@@ -930,7 +935,7 @@ $nav-tabs-border-color:             $gray-300 !default;
 $nav-tabs-border-width:             $border-width !default;
 $nav-tabs-border-radius:            $border-radius !default;
 $nav-tabs-link-hover-border-color:  $gray-200 $gray-200 $nav-tabs-border-color !default;
-$nav-tabs-link-active-color:        $gray-700 !default;
+$nav-tabs-link-active-color:        $primary; //$gray-700 !default;
 $nav-tabs-link-active-bg:           $body-bg !default;
 $nav-tabs-link-active-border-color: $gray-300 $gray-300 $nav-tabs-link-active-bg !default;
 

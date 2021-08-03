@@ -1,0 +1,8 @@
+.sidebar-nav{
+    width:$sidebar-width;
+}
+
+.classes-outer a.active{
+    border-left: 4px solid $primary;
+    color: $primary;
+}
