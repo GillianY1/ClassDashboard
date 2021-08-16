@@ -4,11 +4,12 @@ layout: ./app/layout.ejs
 engine: ejs
 current: index
 ---
-<section class='p-4 vh-100'>
+<section class='main vh-100 p-4'>
+  <div class='container'>
   <div class='d-flex justify-content-center align-items-center mb-6'>
     <h1 class='fs-4 me-5 mb-0'>Admin</h1>
     <!--a class='fs-6 me-auto btn btn-primary' id='addAdmin' data-bs-toggle="modal" data-bs-target="#exampleModal" href='#'-->
-    <a href='#' type="button" class="btn btn-primary fs-6 me-auto" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    <a href='#' type="button" class="fs-6 me-auto" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
       <span class="material-icons me-2 align-middle">add</span>
       Add New Admin
     </a>
@@ -37,10 +38,10 @@ current: index
       <td>emir.wicks@mail.com</td>
       <td>Yes</td>
       <td class='d-flex justify-content-end'>
-        <a class='d-block ' href="/" ><span class="material-icons">
+        <a href="/"  type="button" class="d-block" data-bs-toggle="modal" data-bs-target="#editModal"><span class="material-icons">
           edit
         </span></a>
-        <a href='/' class='d-block ms-3'><span class="material-icons">
+        <a href='/' type="button" class='d-block ms-3'data-bs-toggle="modal" data-bs-target="#viewModal"><span class="material-icons">
           visibility
         </span>
       </a>
@@ -84,9 +85,11 @@ current: index
       </li>
     </ul>
   </nav>
+
+</div>
 </sectoin>
 
-<!-- Modal -->
+<!-- Modal : add admin -->
 <div class=" addAdmin modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-scrollable">
     <div class="modal-content">
@@ -124,3 +127,21 @@ current: index
   </div>
 </div>
 
+<!-- Modal : view admin-->
+<div class="modal fade" id="viewModal" tabindex="-1" aria-labelledby="viewModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body p-6 d-flex">
+        <div class="avatar-icon me-4">
+        </div>
+        <div >
+
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal : edit admin -->
