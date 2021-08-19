@@ -13,3 +13,10 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.link-primary{
+    color: black;
+    &:hover{
+        color: $primary;
+    }
+}
