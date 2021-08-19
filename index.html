@@ -19,8 +19,8 @@
 </head>
 
 <body>
-  <div class='classes-outer d-flex' >
-    <header class="sidebar-nav d-flex flex-column flex-shrink-0 bg-light vh-100 py-4">
+  <!--div class='classes-outer d-flex' -->
+    <header class="leftmenu sidebar-nav d-flex flex-column flex-shrink-0 bg-light vh-100 py-4">
       <a href="/" class="d-flex align-items-center link-dark text-decoration-none ms-4 mb-3">
         <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/2b326fe971cd296bd54667a9b4a63c4b0f19fab3/week5/logo-ANSWER.svg" alt="ANSWER"-->
       </a>
@@ -65,23 +65,24 @@
         </div>
       </div>
     </header>
-    <div class="main">
-      <section class='p-4 vh-100'>
+    <!--div class="main "-->
+      <section class='main vh-100 p-4'>
+  <div class='container'>
   <div class='d-flex justify-content-center align-items-center mb-6'>
     <h1 class='fs-4 me-5 mb-0'>Admin</h1>
     <!--a class='fs-6 me-auto btn btn-primary' id='addAdmin' data-bs-toggle="modal" data-bs-target="#exampleModal" href='#'-->
-    <a href='#' type="button" class="btn btn-primary fs-6 me-auto" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-      <span class="material-icons me-2 align-middle">add</span>
+    <a href='#' type="button" class="fs-6 me-auto link-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+      <span class="material-icons me-2 align-middle text-primary">add</span>
       Add New Admin
     </a>
-    <a href='#'> <span class="material-icons">notifications_active</span></a>
-    <a href='#'> <span class="material-icons ms-3">search</span></a>
+    <a href='#'> <span class="material-icons link-primary">notifications_active</span></a>
+    <a href='#'> <span class="material-icons ms-3 link-primary">search</span></a>
   </div>
   <table class="table table-hover mb-8">
     <thead>
     <tr> 
       <th scope="col">ID 
-        <span class="material-icons algin-top fs-sm">
+        <span class="material-icons algin-top fs-sm text-primary">
           arrow_downward
         </span> 
       </th>
@@ -99,10 +100,10 @@
       <td>emir.wicks@mail.com</td>
       <td>Yes</td>
       <td class='d-flex justify-content-end'>
-        <a class='d-block ' href="/" ><span class="material-icons">
+        <a href="/"  type="button" class="d-block link-primary" data-bs-toggle="modal" data-bs-target="#editModal"><span class="material-icons">
           edit
         </span></a>
-        <a href='/' class='d-block ms-3'><span class="material-icons">
+        <a href='/' type="button" class='d-block ms-3 link-primary'data-bs-toggle="modal" data-bs-target="#viewModal"><span class="material-icons">
           visibility
         </span>
       </a>
@@ -115,10 +116,10 @@
       <td>emir.wicks@mail.com</td>
       <td>Yes</td>
       <td class='d-flex justify-content-end'>
-        <a class='d-block ' href="/" ><span class="material-icons">
+        <a class='d-block link-primary' href="/" ><span class="material-icons">
           edit
         </span></a>
-        <a href='/' class='d-block ms-3'><span class="material-icons">
+        <a href='/' class='d-block ms-3 link-primary'><span class="material-icons">
           visibility
         </span>
       </a>
@@ -128,27 +129,29 @@
   </table>  
 
   <nav aria-label="Page navigation" class="mt-auto">
-    <ul class="pagination justify-content-end">
+    <ul class="pagination justify-content-end" >
       <li class="page-item disabled">
-        <span class="material-icons page-link">
+        <span class="material-icons page-link border border-primary rounded-0">
           keyboard_arrow_left
         </span>
       </li>
-      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link link-primary border border-primary" href="#">1</a></li>
       <li class="page-item active" aria-current="page">
         <span class="page-link">2</span>
       </li>
-      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link link-primary border border-primary" href="#">3</a></li>
       <li class="page-item">
-        <span class="page-link material-icons">
+        <span class="page-link material-icons border border-primary rounded-0">
           keyboard_arrow_right
         </span>
       </li>
     </ul>
   </nav>
+
+</div>
 </sectoin>
 
-<!-- Modal -->
+<!-- Modal : add admin -->
 <div class=" addAdmin modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-scrollable">
     <div class="modal-content">
@@ -186,9 +189,27 @@
   </div>
 </div>
 
+<!-- Modal : view admin-->
+<div class="modal fade" id="viewModal" tabindex="-1" aria-labelledby="viewModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body p-6 d-flex">
+        <div class="avatar-icon me-4">
+        </div>
+        <div >
 
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div>
+      </div>
     </div>
   </div>
+</div>
+
+<!-- Modal : edit admin -->
+
+    <!--/div-->
+  <!--div-->
   <!--script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script-->
   <!--script src="../assets/dist/js/bootstrap.bundle.min.js"></script-->

@@ -9583,16 +9583,34 @@ a {
   padding-left: 28px; }
 
 .main {
-  width: calc(100% - 297px); }
+  margin-left: 297px; }
 
-.sidebar-nav {
-  width: 297px; }
+/*.sidebar-nav{
+    width:$sidebar-width;
+}*/
+.leftmenu {
+  position: fixed;
+  min-width: 297px;
+  min-height: 100vh; }
 
-.classes-outer a.active {
+.leftmenu a.active {
   border-left: 4px solid #198754;
   color: #198754; }
 
 .addAdmin .modal-body::-webkit-scrollbar {
   display: none; }
+
+#viewModal .avatar-icon {
+  width: 33.9%;
+  padding-top: 33.9%;
+  background-image: url(../images/emir.jpeg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.link-primary {
+  color: black; }
+  .link-primary:hover {
+    color: #198754; }
 
 /*# sourceMappingURL=all.css.map */
