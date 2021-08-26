@@ -9,7 +9,7 @@ current: index
   <div class='d-flex justify-content-center align-items-center mb-6'>
     <h1 class='fs-4 me-5 mb-0'>Admin</h1>
     <!--a class='fs-6 me-auto btn btn-primary' id='addAdmin' data-bs-toggle="modal" data-bs-target="#exampleModal" href='#'-->
-    <a href='#' type="button" class="fs-6 me-auto link-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    <a href='#' type="button" class="fs-6 me-auto link-primary" data-bs-toggle="modal" data-bs-target="#addAdminModal">
       <span class="material-icons me-2 align-middle text-primary">add</span>
       Add New Admin
     </a>
@@ -54,10 +54,10 @@ current: index
       <td>emir.wicks@mail.com</td>
       <td>Yes</td>
       <td class='d-flex justify-content-end'>
-        <a class='d-block link-primary' href="/" ><span class="material-icons">
+        <a class='d-block link-primary' type="button" href="/"  ><span class="material-icons">
           edit
         </span></a>
-        <a href='/' class='d-block ms-3 link-primary'><span class="material-icons">
+        <a href='/' class='d-block ms-3 link-primary' type="button" href="/"><span class="material-icons">
           visibility
         </span>
       </a>
@@ -90,7 +90,7 @@ current: index
 </sectoin>
 
 <!-- Modal : add admin -->
-<div class=" addAdmin modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class=" addAdmin modal fade" id="addAdminModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
@@ -132,10 +132,15 @@ current: index
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-body p-6 d-flex">
-        <div class="avatar-icon me-4">
+        <div class="avatar-icon me-4 border border-0 rounded-1">
         </div>
-        <div >
 
+        <div>
+<p class=''>#1</p>
+<p class=''>Admin</p>
+<p class=''>Emir Wicks</p>
+<p class=''>emir.wicks@mail.com</p>
+<p class=''>Verified</p>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div>
@@ -144,4 +149,3 @@ current: index
   </div>
 </div>
 
-<!-- Modal : edit admin -->
